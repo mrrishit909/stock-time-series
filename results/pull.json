@@ -11,16 +11,6 @@
       "bytes": 48941,
       "sha256": "dc55759624a15112e420b3e2d06c9a8dec8007a08cf5780ae43f267f66d6e27e"
     },
-    "NASDAQCOM.csv": {
-      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM",
-      "bytes": 280955,
-      "sha256": "5f40c787ab892665ed1239b0ccad0eda45b3c725ef09a66d3c0026c25e56de04"
-    },
-    "DJIA.csv": {
-      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA",
-      "bytes": 51454,
-      "sha256": "e9a066810dc6b37e5650468540150487ce14dbca778eac54e5d1ee940cf48530"
-    },
     "VIXCLS.csv": {
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
       "bytes": 161442,

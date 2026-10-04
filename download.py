@@ -1,12 +1,12 @@
-"""Step 1: daily adjusted prices of 17 US stocks and ETFs, plus four FRED market indices.
+"""Step 1: daily adjusted prices of 17 US stocks and ETFs, plus two FRED series (S&P 500 index, VIX).
 
-    ./venv/bin/python download.py   -> data/bars.csv (Alpaca), data/SP500.csv NASDAQCOM.csv DJIA.csv VIXCLS.csv (FRED), results/pull.json
+    ./venv/bin/python download.py   -> data/bars.csv (Alpaca), data/SP500.csv VIXCLS.csv (FRED), results/pull.json
 
 Alpaca Markets market-data API (https://data.alpaca.markets/v2/stocks/bars, timeframe 1Day, feed=sip, adjustment=all: split- and dividend-adjusted closes, from 2016-01-04), read with a free paper-trading
 account; the keys are read from a .env file (ALPACA_API_KEY, ALPACA_SECRET_KEY) inside this script and never printed or stored. Alpaca's market-data terms forbid redistributing the raw data, so
 data/ is never committed and the repo holds only our own aggregates and statistics. feed=sip is the consolidated tape (all US exchanges); the free-tier iex feed starts only in July 2020, so it is not used.
-FRED (Federal Reserve Bank of St. Louis, https://fred.stlouisfed.org/series/<id>): SP500 (S&P Dow Jones Indices; price index, 10 years of history), NASDAQCOM (Nasdaq OMX), DJIA (S&P Dow Jones Indices),
-VIXCLS (CBOE); public series from their sources, fetched with the default User-Agent (FRED stalls on custom ones). Set ENV_FILE to point at another .env.
+FRED (Federal Reserve Bank of St. Louis, https://fred.stlouisfed.org/series/<id>): SP500 (S&P Dow Jones Indices; price index, 10 years of history; FRED marks it "copyrighted: pre-approval required") and
+VIXCLS (CBOE; "copyrighted: citation required"); fetched with the default User-Agent (FRED stalls on custom ones). Only statistics computed from them (a correlation, a slope) are published. Set ENV_FILE to point at another .env.
 """
 import csv
 import hashlib
@@ -26,7 +26,7 @@ TICKERS = ["AAPL", "MSFT", "AMZN", "GOOGL", "NVDA", "JPM", "XOM", "JNJ", "WMT", 
            "MCD", "SBUX", "YUM", "CMG", "DPZ", "QSR", "WEN", "DRI"]
 START = "2016-01-01"
 FEED = "sip"          # consolidated tape; the free plan serves it for bars older than 15 minutes. The iex feed only goes back to 2020-07-27 and would miss the 2020 crash.
-FRED = ["SP500", "NASDAQCOM", "DJIA", "VIXCLS"]
+FRED = ["SP500", "VIXCLS"]
 CTX = ssl.create_default_context(cafile=certifi.where())
 
 
