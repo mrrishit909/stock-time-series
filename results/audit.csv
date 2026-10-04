@@ -1,0 +1,13 @@
+check,value
+closes per series,2703
+returns per series,2702
+first close,2016-01-04
+last close,2026-10-02
+missing closes (any series),0
+longest gap between closes (days),4
+closes outside the day's high-low range,0
+returns with |r| > 20%,4
+largest |return| %,26.056
+returns of exactly 0,181
+SPY vs FRED SP500: days compared,2513
+SPY vs FRED SP500: correlation of daily log returns,0.99426

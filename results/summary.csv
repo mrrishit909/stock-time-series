@@ -1,0 +1,10 @@
+key,value
+vix_days,2701
+vix_missing_trading_days,2
+corr_spy_return_dlogvix,-0.7329699762808249
+slope_dlogvix_per_return_pct,-0.053040010874468926
+burn_in_days,750
+refit_days,63
+oos_days,1952
+oos_first_day,2018-12-27
+hill_k_pct,5.0

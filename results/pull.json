@@ -1,0 +1,30 @@
+{
+  "pulled": "2026-10-04",
+  "files": {
+    "bars.csv": {
+      "url": "https://data.alpaca.markets/v2/stocks/bars (feed=sip, adjustment=all, 1Day, symbols: AAPL MSFT AMZN GOOGL NVDA JPM XOM JNJ WMT KO SPY MCD SBUX YUM CMG DPZ QSR WEN DRI)",
+      "bytes": 2578738,
+      "sha256": "d876d36f2e0c7e04a4c8de59d94a74191a404188a8fb6d0b68300fb1816ee130"
+    },
+    "SP500.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500",
+      "bytes": 48941,
+      "sha256": "dc55759624a15112e420b3e2d06c9a8dec8007a08cf5780ae43f267f66d6e27e"
+    },
+    "NASDAQCOM.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM",
+      "bytes": 280955,
+      "sha256": "5f40c787ab892665ed1239b0ccad0eda45b3c725ef09a66d3c0026c25e56de04"
+    },
+    "DJIA.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA",
+      "bytes": 51454,
+      "sha256": "e9a066810dc6b37e5650468540150487ce14dbca778eac54e5d1ee940cf48530"
+    },
+    "VIXCLS.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
+      "bytes": 161442,
+      "sha256": "cc0b59b37b714477d604de46fba408fd888e82308561111a772f3aacf931387f"
+    }
+  }
+}
